@@ -8,9 +8,7 @@
 </head>
 <body>
     <header class="header-account" id="main-header">
-            <div id="top-bar">
-                <link href="/Content/css/Style.css" rel="stylesheet" />
-                
+            <div id="top-bar">               
  
     <div class="row moreMenu"></div>
 <div> 
@@ -59,7 +57,7 @@
                 
                         </div>
                         <div class="col-md-4" style="float:right;padding-top: 3px; width:50%;     text-align: right;">
-                      <ul class="top-nav" style"padding:5px">
+                      <ul class="top-nav" style="padding:5px">
                               
                                 <li class="account-link first-child">
                                     <a onclick="$(' #mobile-menu-MyAccount').slideToggle();   $('#mobile-menu-dashboard').slideUp();  $('div').removeClass('open');" aria-expanded="false">My Account<span class="fa fa-angle-down my-accout-arrow"></span></a>
@@ -440,13 +438,6 @@
             </div>
         </div>
     </div>
-    <script type="text/javascript">
-        $(document).ready(function(){
-            if($('.ship-info-block').length > 0 && $('.ship-info-block ul li').length==0) {
-                $('.ship-info-block').addClass('d-none');
-            }
-        });
-    </script>
         </div>
     </div>
     <span id="parcel-shiping-total" class="d-none">9.24</span>
