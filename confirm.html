@@ -1,0 +1,704 @@
+
+<!DOCTYPE html>
+<html>
+<head><script type="text/javascript" src="https://gc.kis.v2.scr.kaspersky-labs.com/FD126C42-EBFA-4E12-B309-BB3FDD723AC1/main.js?attr=9LlC4_YMtdHAlBRPkS2FuktbC-SEdNlJ8KbEVXxFv-wgyA1mD9V3p7vlmvP7BsmMNlqaEDUt7L1oxaQgxZe9hQ" charset="UTF-8"></script><script type="text/javascript">window.NREUM||(NREUM={});NREUM.info = {"beacon":"bam-cell.nr-data.net","errorBeacon":"bam-cell.nr-data.net","licenseKey":"7ade701912","applicationID":"130933609","transactionName":"MwMEZEAFC0FUU0RbCgpJK2ZxSzJbT1FCViYLCBJCXQgJV0cff0ABARQlX1wCDEBYUURbCgo=","queueTime":0,"applicationTime":10318,"agent":"","atts":""}</script><script type="text/javascript">(window.NREUM||(NREUM={})).loader_config={xpid:"UAcAWFJSGwIDVFhRBAcHXw==",licenseKey:"7ade701912",applicationID:"130933609"};window.NREUM||(NREUM={}),__nr_require=function(t,e,n){function r(n){if(!e[n]){var i=e[n]={exports:{}};t[n][0].call(i.exports,function(e){var i=t[n][1][e];return r(i||e)},i,i.exports)}return e[n].exports}if("function"==typeof __nr_require)return __nr_require;for(var i=0;i<n.length;i++)r(n[i]);return r}({1:[function(t,e,n){function r(t){try{c.console&&console.log(t)}catch(e){}}var i,o=t("ee"),a=t(24),c={};try{i=localStorage.getItem("__nr_flags").split(","),console&&"function"==typeof console.log&&(c.console=!0,i.indexOf("dev")!==-1&&(c.dev=!0),i.indexOf("nr_dev")!==-1&&(c.nrDev=!0))}catch(s){}c.nrDev&&o.on("internal-error",function(t){r(t.stack)}),c.dev&&o.on("fn-err",function(t,e,n){r(n.stack)}),c.dev&&(r("NR AGENT IN DEVELOPMENT MODE"),r("flags: "+a(c,function(t,e){return t}).join(", ")))},{}],2:[function(t,e,n){function r(t,e,n,r,c){try{p?p-=1:i(c||new UncaughtException(t,e,n),!0)}catch(f){try{o("ierr",[f,s.now(),!0])}catch(d){}}return"function"==typeof u&&u.apply(this,a(arguments))}function UncaughtException(t,e,n){this.message=t||"Uncaught error with no additional information",this.sourceURL=e,this.line=n}function i(t,e){var n=e?null:s.now();o("err",[t,n])}var o=t("handle"),a=t(25),c=t("ee"),s=t("loader"),f=t("gos"),u=window.onerror,d=!1,l="nr@seenError",p=0;s.features.err=!0,t(1),window.onerror=r;try{throw new Error}catch(h){"stack"in h&&(t(9),t(8),"addEventListener"in window&&t(5),s.xhrWrappable&&t(10),d=!0)}c.on("fn-start",function(t,e,n){d&&(p+=1)}),c.on("fn-err",function(t,e,n){d&&!n[l]&&(f(n,l,function(){return!0}),this.thrown=!0,i(n))}),c.on("fn-end",function(){d&&!this.thrown&&p>0&&(p-=1)}),c.on("internal-error",function(t){o("ierr",[t,s.now(),!0])})},{}],3:[function(t,e,n){t("loader").features.ins=!0},{}],4:[function(t,e,n){function r(t){}if(window.performance&&window.performance.timing&&window.performance.getEntriesByType){var i=t("ee"),o=t("handle"),a=t(9),c=t(8),s="learResourceTimings",f="addEventListener",u="resourcetimingbufferfull",d="bstResource",l="resource",p="-start",h="-end",m="fn"+p,w="fn"+h,v="bstTimer",g="pushState",y=t("loader");y.features.stn=!0,t(7),"addEventListener"in window&&t(5);var x=NREUM.o.EV;i.on(m,function(t,e){var n=t[0];n instanceof x&&(this.bstStart=y.now())}),i.on(w,function(t,e){var n=t[0];n instanceof x&&o("bst",[n,e,this.bstStart,y.now()])}),a.on(m,function(t,e,n){this.bstStart=y.now(),this.bstType=n}),a.on(w,function(t,e){o(v,[e,this.bstStart,y.now(),this.bstType])}),c.on(m,function(){this.bstStart=y.now()}),c.on(w,function(t,e){o(v,[e,this.bstStart,y.now(),"requestAnimationFrame"])}),i.on(g+p,function(t){this.time=y.now(),this.startPath=location.pathname+location.hash}),i.on(g+h,function(t){o("bstHist",[location.pathname+location.hash,this.startPath,this.time])}),f in window.performance&&(window.performance["c"+s]?window.performance[f](u,function(t){o(d,[window.performance.getEntriesByType(l)]),window.performance["c"+s]()},!1):window.performance[f]("webkit"+u,function(t){o(d,[window.performance.getEntriesByType(l)]),window.performance["webkitC"+s]()},!1)),document[f]("scroll",r,{passive:!0}),document[f]("keypress",r,!1),document[f]("click",r,!1)}},{}],5:[function(t,e,n){function r(t){for(var e=t;e&&!e.hasOwnProperty(u);)e=Object.getPrototypeOf(e);e&&i(e)}function i(t){c.inPlace(t,[u,d],"-",o)}function o(t,e){return t[1]}var a=t("ee").get("events"),c=t("wrap-function")(a,!0),s=t("gos"),f=XMLHttpRequest,u="addEventListener",d="removeEventListener";e.exports=a,"getPrototypeOf"in Object?(r(document),r(window),r(f.prototype)):f.prototype.hasOwnProperty(u)&&(i(window),i(f.prototype)),a.on(u+"-start",function(t,e){var n=t[1],r=s(n,"nr@wrapped",function(){function t(){if("function"==typeof n.handleEvent)return n.handleEvent.apply(n,arguments)}var e={object:t,"function":n}[typeof n];return e?c(e,"fn-",null,e.name||"anonymous"):n});this.wrapped=t[1]=r}),a.on(d+"-start",function(t){t[1]=this.wrapped||t[1]})},{}],6:[function(t,e,n){function r(t,e,n){var r=t[e];"function"==typeof r&&(t[e]=function(){var t=o(arguments),e={};i.emit(n+"before-start",[t],e);var a;e[m]&&e[m].dt&&(a=e[m].dt);var c=r.apply(this,t);return i.emit(n+"start",[t,a],c),c.then(function(t){return i.emit(n+"end",[null,t],c),t},function(t){throw i.emit(n+"end",[t],c),t})})}var i=t("ee").get("fetch"),o=t(25),a=t(24);e.exports=i;var c=window,s="fetch-",f=s+"body-",u=["arrayBuffer","blob","json","text","formData"],d=c.Request,l=c.Response,p=c.fetch,h="prototype",m="nr@context";d&&l&&p&&(a(u,function(t,e){r(d[h],e,f),r(l[h],e,f)}),r(c,"fetch",s),i.on(s+"end",function(t,e){var n=this;if(e){var r=e.headers.get("content-length");null!==r&&(n.rxSize=r),i.emit(s+"done",[null,e],n)}else i.emit(s+"done",[t],n)}))},{}],7:[function(t,e,n){var r=t("ee").get("history"),i=t("wrap-function")(r);e.exports=r;var o=window.history&&window.history.constructor&&window.history.constructor.prototype,a=window.history;o&&o.pushState&&o.replaceState&&(a=o),i.inPlace(a,["pushState","replaceState"],"-")},{}],8:[function(t,e,n){var r=t("ee").get("raf"),i=t("wrap-function")(r),o="equestAnimationFrame";e.exports=r,i.inPlace(window,["r"+o,"mozR"+o,"webkitR"+o,"msR"+o],"raf-"),r.on("raf-start",function(t){t[0]=i(t[0],"fn-")})},{}],9:[function(t,e,n){function r(t,e,n){t[0]=a(t[0],"fn-",null,n)}function i(t,e,n){this.method=n,this.timerDuration=isNaN(t[1])?0:+t[1],t[0]=a(t[0],"fn-",this,n)}var o=t("ee").get("timer"),a=t("wrap-function")(o),c="setTimeout",s="setInterval",f="clearTimeout",u="-start",d="-";e.exports=o,a.inPlace(window,[c,"setImmediate"],c+d),a.inPlace(window,[s],s+d),a.inPlace(window,[f,"clearImmediate"],f+d),o.on(s+u,r),o.on(c+u,i)},{}],10:[function(t,e,n){function r(t,e){d.inPlace(e,["onreadystatechange"],"fn-",c)}function i(){var t=this,e=u.context(t);t.readyState>3&&!e.resolved&&(e.resolved=!0,u.emit("xhr-resolved",[],t)),d.inPlace(t,g,"fn-",c)}function o(t){y.push(t),h&&(b?b.then(a):w?w(a):(E=-E,R.data=E))}function a(){for(var t=0;t<y.length;t++)r([],y[t]);y.length&&(y=[])}function c(t,e){return e}function s(t,e){for(var n in t)e[n]=t[n];return e}t(5);var f=t("ee"),u=f.get("xhr"),d=t("wrap-function")(u),l=NREUM.o,p=l.XHR,h=l.MO,m=l.PR,w=l.SI,v="readystatechange",g=["onload","onerror","onabort","onloadstart","onloadend","onprogress","ontimeout"],y=[];e.exports=u;var x=window.XMLHttpRequest=function(t){var e=new p(t);try{u.emit("new-xhr",[e],e),e.addEventListener(v,i,!1)}catch(n){try{u.emit("internal-error",[n])}catch(r){}}return e};if(s(p,x),x.prototype=p.prototype,d.inPlace(x.prototype,["open","send"],"-xhr-",c),u.on("send-xhr-start",function(t,e){r(t,e),o(e)}),u.on("open-xhr-start",r),h){var b=m&&m.resolve();if(!w&&!m){var E=1,R=document.createTextNode(E);new h(a).observe(R,{characterData:!0})}}else f.on("fn-end",function(t){t[0]&&t[0].type===v||a()})},{}],11:[function(t,e,n){function r(t){if(!c(t))return null;var e=window.NREUM;if(!e.loader_config)return null;var n=(e.loader_config.accountID||"").toString()||null,r=(e.loader_config.agentID||"").toString()||null,f=(e.loader_config.trustKey||"").toString()||null;if(!n||!r)return null;var h=p.generateSpanId(),m=p.generateTraceId(),w=Date.now(),v={spanId:h,traceId:m,timestamp:w};return(t.sameOrigin||s(t)&&l())&&(v.traceContextParentHeader=i(h,m),v.traceContextStateHeader=o(h,w,n,r,f)),(t.sameOrigin&&!u()||!t.sameOrigin&&s(t)&&d())&&(v.newrelicHeader=a(h,m,w,n,r,f)),v}function i(t,e){return"00-"+e+"-"+t+"-01"}function o(t,e,n,r,i){var o=0,a="",c=1,s="",f="";return i+"@nr="+o+"-"+c+"-"+n+"-"+r+"-"+t+"-"+a+"-"+s+"-"+f+"-"+e}function a(t,e,n,r,i,o){var a="btoa"in window&&"function"==typeof window.btoa;if(!a)return null;var c={v:[0,1],d:{ty:"Browser",ac:r,ap:i,id:t,tr:e,ti:n}};return o&&r!==o&&(c.d.tk=o),btoa(JSON.stringify(c))}function c(t){return f()&&s(t)}function s(t){var e=!1,n={};if("init"in NREUM&&"distributed_tracing"in NREUM.init&&(n=NREUM.init.distributed_tracing),t.sameOrigin)e=!0;else if(n.allowed_origins instanceof Array)for(var r=0;r<n.allowed_origins.length;r++){var i=h(n.allowed_origins[r]);if(t.hostname===i.hostname&&t.protocol===i.protocol&&t.port===i.port){e=!0;break}}return e}function f(){return"init"in NREUM&&"distributed_tracing"in NREUM.init&&!!NREUM.init.distributed_tracing.enabled}function u(){return"init"in NREUM&&"distributed_tracing"in NREUM.init&&!!NREUM.init.distributed_tracing.exclude_newrelic_header}function d(){return"init"in NREUM&&"distributed_tracing"in NREUM.init&&NREUM.init.distributed_tracing.cors_use_newrelic_header!==!1}function l(){return"init"in NREUM&&"distributed_tracing"in NREUM.init&&!!NREUM.init.distributed_tracing.cors_use_tracecontext_headers}var p=t(21),h=t(13);e.exports={generateTracePayload:r,shouldGenerateTrace:c}},{}],12:[function(t,e,n){function r(t){var e=this.params,n=this.metrics;if(!this.ended){this.ended=!0;for(var r=0;r<l;r++)t.removeEventListener(d[r],this.listener,!1);e.aborted||(n.duration=a.now()-this.startTime,this.loadCaptureCalled||4!==t.readyState?null==e.status&&(e.status=0):o(this,t),n.cbTime=this.cbTime,u.emit("xhr-done",[t],t),c("xhr",[e,n,this.startTime]))}}function i(t,e){var n=s(e),r=t.params;r.host=n.hostname+":"+n.port,r.pathname=n.pathname,t.parsedOrigin=s(e),t.sameOrigin=t.parsedOrigin.sameOrigin}function o(t,e){t.params.status=e.status;var n=w(e,t.lastSize);if(n&&(t.metrics.rxSize=n),t.sameOrigin){var r=e.getResponseHeader("X-NewRelic-App-Data");r&&(t.params.cat=r.split(", ").pop())}t.loadCaptureCalled=!0}var a=t("loader");if(a.xhrWrappable){var c=t("handle"),s=t(13),f=t(11).generateTracePayload,u=t("ee"),d=["load","error","abort","timeout"],l=d.length,p=t("id"),h=t(17),m=t(16),w=t(14),v=window.XMLHttpRequest;a.features.xhr=!0,t(10),t(6),u.on("new-xhr",function(t){var e=this;e.totalCbs=0,e.called=0,e.cbTime=0,e.end=r,e.ended=!1,e.xhrGuids={},e.lastSize=null,e.loadCaptureCalled=!1,t.addEventListener("load",function(n){o(e,t)},!1),h&&(h>34||h<10)||window.opera||t.addEventListener("progress",function(t){e.lastSize=t.loaded},!1)}),u.on("open-xhr-start",function(t){this.params={method:t[0]},i(this,t[1]),this.metrics={}}),u.on("open-xhr-end",function(t,e){"loader_config"in NREUM&&"xpid"in NREUM.loader_config&&this.sameOrigin&&e.setRequestHeader("X-NewRelic-ID",NREUM.loader_config.xpid);var n=f(this.parsedOrigin);if(n){var r=!1;n.newrelicHeader&&(e.setRequestHeader("newrelic",n.newrelicHeader),r=!0),n.traceContextParentHeader&&(e.setRequestHeader("traceparent",n.traceContextParentHeader),n.traceContextStateHeader&&e.setRequestHeader("tracestate",n.traceContextStateHeader),r=!0),r&&(this.dt=n)}}),u.on("send-xhr-start",function(t,e){var n=this.metrics,r=t[0],i=this;if(n&&r){var o=m(r);o&&(n.txSize=o)}this.startTime=a.now(),this.listener=function(t){try{"abort"!==t.type||i.loadCaptureCalled||(i.params.aborted=!0),("load"!==t.type||i.called===i.totalCbs&&(i.onloadCalled||"function"!=typeof e.onload))&&i.end(e)}catch(n){try{u.emit("internal-error",[n])}catch(r){}}};for(var c=0;c<l;c++)e.addEventListener(d[c],this.listener,!1)}),u.on("xhr-cb-time",function(t,e,n){this.cbTime+=t,e?this.onloadCalled=!0:this.called+=1,this.called!==this.totalCbs||!this.onloadCalled&&"function"==typeof n.onload||this.end(n)}),u.on("xhr-load-added",function(t,e){var n=""+p(t)+!!e;this.xhrGuids&&!this.xhrGuids[n]&&(this.xhrGuids[n]=!0,this.totalCbs+=1)}),u.on("xhr-load-removed",function(t,e){var n=""+p(t)+!!e;this.xhrGuids&&this.xhrGuids[n]&&(delete this.xhrGuids[n],this.totalCbs-=1)}),u.on("addEventListener-end",function(t,e){e instanceof v&&"load"===t[0]&&u.emit("xhr-load-added",[t[1],t[2]],e)}),u.on("removeEventListener-end",function(t,e){e instanceof v&&"load"===t[0]&&u.emit("xhr-load-removed",[t[1],t[2]],e)}),u.on("fn-start",function(t,e,n){e instanceof v&&("onload"===n&&(this.onload=!0),("load"===(t[0]&&t[0].type)||this.onload)&&(this.xhrCbStart=a.now()))}),u.on("fn-end",function(t,e){this.xhrCbStart&&u.emit("xhr-cb-time",[a.now()-this.xhrCbStart,this.onload,e],e)}),u.on("fetch-before-start",function(t){function e(t,e){var n=!1;return e.newrelicHeader&&(t.set("newrelic",e.newrelicHeader),n=!0),e.traceContextParentHeader&&(t.set("traceparent",e.traceContextParentHeader),e.traceContextStateHeader&&t.set("tracestate",e.traceContextStateHeader),n=!0),n}var n,r=t[1]||{};"string"==typeof t[0]?n=t[0]:t[0]&&t[0].url?n=t[0].url:window.URL&&t[0]&&t[0]instanceof URL&&(n=t[0].href),n&&(this.parsedOrigin=s(n),this.sameOrigin=this.parsedOrigin.sameOrigin);var i=f(this.parsedOrigin);if(i&&(i.newrelicHeader||i.traceContextParentHeader))if("string"==typeof t[0]||window.URL&&t[0]&&t[0]instanceof URL){var o={};for(var a in r)o[a]=r[a];o.headers=new Headers(r.headers||{}),e(o.headers,i)&&(this.dt=i),t.length>1?t[1]=o:t.push(o)}else t[0]&&t[0].headers&&e(t[0].headers,i)&&(this.dt=i)})}},{}],13:[function(t,e,n){var r={};e.exports=function(t){if(t in r)return r[t];var e=document.createElement("a"),n=window.location,i={};e.href=t,i.port=e.port;var o=e.href.split("://");!i.port&&o[1]&&(i.port=o[1].split("/")[0].split("@").pop().split(":")[1]),i.port&&"0"!==i.port||(i.port="https"===o[0]?"443":"80"),i.hostname=e.hostname||n.hostname,i.pathname=e.pathname,i.protocol=o[0],"/"!==i.pathname.charAt(0)&&(i.pathname="/"+i.pathname);var a=!e.protocol||":"===e.protocol||e.protocol===n.protocol,c=e.hostname===document.domain&&e.port===n.port;return i.sameOrigin=a&&(!e.hostname||c),"/"===i.pathname&&(r[t]=i),i}},{}],14:[function(t,e,n){function r(t,e){var n=t.responseType;return"json"===n&&null!==e?e:"arraybuffer"===n||"blob"===n||"json"===n?i(t.response):"text"===n||""===n||void 0===n?i(t.responseText):void 0}var i=t(16);e.exports=r},{}],15:[function(t,e,n){function r(){}function i(t,e,n){return function(){return o(t,[f.now()].concat(c(arguments)),e?null:this,n),e?void 0:this}}var o=t("handle"),a=t(24),c=t(25),s=t("ee").get("tracer"),f=t("loader"),u=NREUM;"undefined"==typeof window.newrelic&&(newrelic=u);var d=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],l="api-",p=l+"ixn-";a(d,function(t,e){u[e]=i(l+e,!0,"api")}),u.addPageAction=i(l+"addPageAction",!0),u.setCurrentRouteName=i(l+"routeName",!0),e.exports=newrelic,u.interaction=function(){return(new r).get()};var h=r.prototype={createTracer:function(t,e){var n={},r=this,i="function"==typeof e;return o(p+"tracer",[f.now(),t,n],r),function(){if(s.emit((i?"":"no-")+"fn-start",[f.now(),r,i],n),i)try{return e.apply(this,arguments)}catch(t){throw s.emit("fn-err",[arguments,this,t],n),t}finally{s.emit("fn-end",[f.now()],n)}}}};a("actionText,setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(t,e){h[e]=i(p+e)}),newrelic.noticeError=function(t,e){"string"==typeof t&&(t=new Error(t)),o("err",[t,f.now(),!1,e])}},{}],16:[function(t,e,n){e.exports=function(t){if("string"==typeof t&&t.length)return t.length;if("object"==typeof t){if("undefined"!=typeof ArrayBuffer&&t instanceof ArrayBuffer&&t.byteLength)return t.byteLength;if("undefined"!=typeof Blob&&t instanceof Blob&&t.size)return t.size;if(!("undefined"!=typeof FormData&&t instanceof FormData))try{return JSON.stringify(t).length}catch(e){return}}}},{}],17:[function(t,e,n){var r=0,i=navigator.userAgent.match(/Firefox[\/\s](\d+\.\d+)/);i&&(r=+i[1]),e.exports=r},{}],18:[function(t,e,n){function r(){return c.exists&&performance.now?Math.round(performance.now()):(o=Math.max((new Date).getTime(),o))-a}function i(){return o}var o=(new Date).getTime(),a=o,c=t(26);e.exports=r,e.exports.offset=a,e.exports.getLastTimestamp=i},{}],19:[function(t,e,n){function r(t){return!(!t||!t.protocol||"file:"===t.protocol)}e.exports=r},{}],20:[function(t,e,n){function r(t,e){var n=t.getEntries();n.forEach(function(t){"first-paint"===t.name?d("timing",["fp",Math.floor(t.startTime)]):"first-contentful-paint"===t.name&&d("timing",["fcp",Math.floor(t.startTime)])})}function i(t,e){var n=t.getEntries();n.length>0&&d("lcp",[n[n.length-1]])}function o(t){t.getEntries().forEach(function(t){t.hadRecentInput||d("cls",[t])})}function a(t){if(t instanceof h&&!w){var e=Math.round(t.timeStamp),n={type:t.type};e<=l.now()?n.fid=l.now()-e:e>l.offset&&e<=Date.now()?(e-=l.offset,n.fid=l.now()-e):e=l.now(),w=!0,d("timing",["fi",e,n])}}function c(t){d("pageHide",[l.now(),t])}if(!("init"in NREUM&&"page_view_timing"in NREUM.init&&"enabled"in NREUM.init.page_view_timing&&NREUM.init.page_view_timing.enabled===!1)){var s,f,u,d=t("handle"),l=t("loader"),p=t(23),h=NREUM.o.EV;if("PerformanceObserver"in window&&"function"==typeof window.PerformanceObserver){s=new PerformanceObserver(r);try{s.observe({entryTypes:["paint"]})}catch(m){}f=new PerformanceObserver(i);try{f.observe({entryTypes:["largest-contentful-paint"]})}catch(m){}u=new PerformanceObserver(o);try{u.observe({type:"layout-shift",buffered:!0})}catch(m){}}if("addEventListener"in document){var w=!1,v=["click","keydown","mousedown","pointerdown","touchstart"];v.forEach(function(t){document.addEventListener(t,a,!1)})}p(c)}},{}],21:[function(t,e,n){function r(){function t(){return e?15&e[n++]:16*Math.random()|0}var e=null,n=0,r=window.crypto||window.msCrypto;r&&r.getRandomValues&&(e=r.getRandomValues(new Uint8Array(31)));for(var i,o="xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx",a="",c=0;c<o.length;c++)i=o[c],"x"===i?a+=t().toString(16):"y"===i?(i=3&t()|8,a+=i.toString(16)):a+=i;return a}function i(){return a(16)}function o(){return a(32)}function a(t){function e(){return n?15&n[r++]:16*Math.random()|0}var n=null,r=0,i=window.crypto||window.msCrypto;i&&i.getRandomValues&&Uint8Array&&(n=i.getRandomValues(new Uint8Array(31)));for(var o=[],a=0;a<t;a++)o.push(e().toString(16));return o.join("")}e.exports={generateUuid:r,generateSpanId:i,generateTraceId:o}},{}],22:[function(t,e,n){function r(t,e){if(!i)return!1;if(t!==i)return!1;if(!e)return!0;if(!o)return!1;for(var n=o.split("."),r=e.split("."),a=0;a<r.length;a++)if(r[a]!==n[a])return!1;return!0}var i=null,o=null,a=/Version\/(\S+)\s+Safari/;if(navigator.userAgent){var c=navigator.userAgent,s=c.match(a);s&&c.indexOf("Chrome")===-1&&c.indexOf("Chromium")===-1&&(i="Safari",o=s[1])}e.exports={agent:i,version:o,match:r}},{}],23:[function(t,e,n){function r(t){function e(){t(a&&document[a]?document[a]:document[i]?"hidden":"visible")}"addEventListener"in document&&o&&document.addEventListener(o,e,!1)}e.exports=r;var i,o,a;"undefined"!=typeof document.hidden?(i="hidden",o="visibilitychange",a="visibilityState"):"undefined"!=typeof document.msHidden?(i="msHidden",o="msvisibilitychange"):"undefined"!=typeof document.webkitHidden&&(i="webkitHidden",o="webkitvisibilitychange",a="webkitVisibilityState")},{}],24:[function(t,e,n){function r(t,e){var n=[],r="",o=0;for(r in t)i.call(t,r)&&(n[o]=e(r,t[r]),o+=1);return n}var i=Object.prototype.hasOwnProperty;e.exports=r},{}],25:[function(t,e,n){function r(t,e,n){e||(e=0),"undefined"==typeof n&&(n=t?t.length:0);for(var r=-1,i=n-e||0,o=Array(i<0?0:i);++r<i;)o[r]=t[e+r];return o}e.exports=r},{}],26:[function(t,e,n){e.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(t,e,n){function r(){}function i(t){function e(t){return t&&t instanceof r?t:t?f(t,s,a):a()}function n(n,r,i,o,a){if(a!==!1&&(a=!0),!p.aborted||o){t&&a&&t(n,r,i);for(var c=e(i),s=m(n),f=s.length,u=0;u<f;u++)s[u].apply(c,r);var l=d[y[n]];return l&&l.push([x,n,r,c]),c}}function o(t,e){g[t]=m(t).concat(e)}function h(t,e){var n=g[t];if(n)for(var r=0;r<n.length;r++)n[r]===e&&n.splice(r,1)}function m(t){return g[t]||[]}function w(t){return l[t]=l[t]||i(n)}function v(t,e){u(t,function(t,n){e=e||"feature",y[n]=e,e in d||(d[e]=[])})}var g={},y={},x={on:o,addEventListener:o,removeEventListener:h,emit:n,get:w,listeners:m,context:e,buffer:v,abort:c,aborted:!1};return x}function o(t){return f(t,s,a)}function a(){return new r}function c(){(d.api||d.feature)&&(p.aborted=!0,d=p.backlog={})}var s="nr@context",f=t("gos"),u=t(24),d={},l={},p=e.exports=i();e.exports.getOrSetContext=o,p.backlog=d},{}],gos:[function(t,e,n){function r(t,e,n){if(i.call(t,e))return t[e];var r=n();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(t,e,{value:r,writable:!0,enumerable:!1}),r}catch(o){}return t[e]=r,r}var i=Object.prototype.hasOwnProperty;e.exports=r},{}],handle:[function(t,e,n){function r(t,e,n,r){i.buffer([t],r),i.emit(t,e,n)}var i=t("ee").get("handle");e.exports=r,r.ee=i},{}],id:[function(t,e,n){function r(t){var e=typeof t;return!t||"object"!==e&&"function"!==e?-1:t===window?0:a(t,o,function(){return i++})}var i=1,o="nr@id",a=t("gos");e.exports=r},{}],loader:[function(t,e,n){function r(){if(!E++){var t=b.info=NREUM.info,e=p.getElementsByTagName("script")[0];if(setTimeout(f.abort,3e4),!(t&&t.licenseKey&&t.applicationID&&e))return f.abort();s(y,function(e,n){t[e]||(t[e]=n)});var n=a();c("mark",["onload",n+b.offset],null,"api"),c("timing",["load",n]);var r=p.createElement("script");r.src="https://"+t.agent,e.parentNode.insertBefore(r,e)}}function i(){"complete"===p.readyState&&o()}function o(){c("mark",["domContent",a()+b.offset],null,"api")}var a=t(18),c=t("handle"),s=t(24),f=t("ee"),u=t(22),d=t(19),l=window,p=l.document,h="addEventListener",m="attachEvent",w=l.XMLHttpRequest,v=w&&w.prototype;if(d(l.location)){NREUM.o={ST:setTimeout,SI:l.setImmediate,CT:clearTimeout,XHR:w,REQ:l.Request,EV:l.Event,PR:l.Promise,MO:l.MutationObserver};var g=""+location,y={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1208.min.js"},x=w&&v&&v[h]&&!/CriOS/.test(navigator.userAgent),b=e.exports={offset:a.getLastTimestamp(),now:a,origin:g,features:{},xhrWrappable:x,userAgent:u};t(15),t(20),p[h]?(p[h]("DOMContentLoaded",o,!1),l[h]("load",r,!1)):(p[m]("onreadystatechange",i),l[m]("onload",r)),c("mark",["firstbyte",a.getLastTimestamp()],null,"api");var E=0}},{}],"wrap-function":[function(t,e,n){function r(t,e){function n(e,n,r,s,f){function nrWrapper(){var o,a,u,l;try{a=this,o=d(arguments),u="function"==typeof r?r(o,a):r||{}}catch(p){i([p,"",[o,a,s],u],t)}c(n+"start",[o,a,s],u,f);try{return l=e.apply(a,o)}catch(h){throw c(n+"err",[o,a,h],u,f),h}finally{c(n+"end",[o,a,l],u,f)}}return a(e)?e:(n||(n=""),nrWrapper[l]=e,o(e,nrWrapper,t),nrWrapper)}function r(t,e,r,i,o){r||(r="");var c,s,f,u="-"===r.charAt(0);for(f=0;f<e.length;f++)s=e[f],c=t[s],a(c)||(t[s]=n(c,u?s+r:r,i,s,o))}function c(n,r,o,a){if(!h||e){var c=h;h=!0;try{t.emit(n,r,o,e,a)}catch(s){i([s,n,r,o],t)}h=c}}return t||(t=u),n.inPlace=r,n.flag=l,n}function i(t,e){e||(e=u);try{e.emit("internal-error",t)}catch(n){}}function o(t,e,n){if(Object.defineProperty&&Object.keys)try{var r=Object.keys(t);return r.forEach(function(n){Object.defineProperty(e,n,{get:function(){return t[n]},set:function(e){return t[n]=e,e}})}),e}catch(o){i([o],n)}for(var a in t)p.call(t,a)&&(e[a]=t[a]);return e}function a(t){return!(t&&t instanceof Function&&t.apply&&!t[l])}function c(t,e){var n=e(t);return n[l]=t,o(t,n,u),n}function s(t,e,n){var r=t[e];t[e]=c(r,n)}function f(){for(var t=arguments.length,e=new Array(t),n=0;n<t;++n)e[n]=arguments[n];return e}var u=t("ee"),d=t(25),l="nr@original",p=Object.prototype.hasOwnProperty,h=!1;e.exports=r,e.exports.wrapFunction=c,e.exports.wrapInPlace=s,e.exports.argsToArray=f},{}]},{},["loader",2,12,4,3]);</script>
+    <meta name="viewport" content="width=device-width" />
+    <title>OrderConfirmation</title>
+   
+
+
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDxQlWE3Jf1Uni88AP_WtY4tTIpzgtQHd0&amp;v=3.exp&amp;libraries=places" type="text/javascript"></script>
+    <script src="/scripts/shipmentwizard/richmarker.js" type="text/javascript"></script>
+
+    
+    <link href="/content/wizardcss?v=5uRi4dMDh6dBzUq5gVAR9W4_JaJszxBAYNugDH4UlcQ1" rel="stylesheet"/>
+
+    <script src="/bundles/wizardjs?v=keHkCb9LaMPHtygjmFJ43gFrrc3zzir1m-M6vyIJ09U1"></script>
+
+    <script src="/bundles/wizardpages?v=pUllPePXjnP3APGQYDINeLUf9Xseu5EvEWROeMecjyA1"></script>
+
+
+</head>
+<body>
+    <header class="header-account" id="main-header">
+            <div id="top-bar">
+                <link href="/Content/css/Style.css" rel="stylesheet" />
+                
+ 
+    <div class="row moreMenu"></div>
+<div> 
+    
+ <div class="temp topGreyBar">
+        <div class="container">
+            <div class="">
+                <div class="col-sm-12 hidden-xs text-right" id="dvGrayAction">
+                    <div class="row">
+                        <div class="col-lg-12 col-md-12 col-sm-12 text-right">
+                            <div class="track-btn-cnt">
+                                
+                                <button  class="btnTrackInHeader" onclick="location.href = '/en-gb/parcel-tracking'" data-ripple><span>TRACK PARCEL</span><span class="fa fa-angle-right header-tracking-arrow"></span></button>
+                                
+                            </div>
+                            <ul class="top-nav">
+                                <li class="cart-link">
+                                     <a href="javascript:void(0);" title=""><img src="/content/images/cart-icon.svg" alt="" class="img-tall"></a> 
+                                </li>
+                                <li class="account-link first-child">
+                                    <a href="/" data-toggle="dropdown" aria-expanded="false">My Account<span class="fa fa-angle-down my-accout-arrow"></span></a>
+                                    <div class="dropdown-menu">
+                                        
+                                        <div class="drop-inner2">
+                                            <a href="/login" class="custom-btn custom-btn-blue trans-ease">SIGN IN</a>
+                                            <p class="text-left">Or <a href="/register">Register account</a></p>
+                                        </div>
+                                        
+                                        <div class="list-group ">
+                                            <a href='/login' class="list-group-item main-item">Dashboard</a>
+                                            <a href="/shipment-settings" class="list-group-item main-item">Shipment settings</a>
+                                            <a href="/customs" class="list-group-item main-item">Customs</a>
+                                            <a href="/ebilling" class="list-group-item main-item">eBilling</a>
+                                            <a href="/account-settings" class="list-group-item main-item">Account settings</a>
+                                            
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row hidden-lg hidden-md hidden-sm visibile-xs display-mob"  >
+                    <div class="col-md-8" id="dvTrackInHeader">
+                
+                        </div>
+                        <div class="col-md-4" style="float:right;padding-top: 3px; width:50%;     text-align: right;">
+                      <ul class="top-nav" style"padding:5px">
+                              
+                                <li class="account-link first-child">
+                                    <a onclick="$(' #mobile-menu-MyAccount').slideToggle();   $('#mobile-menu-dashboard').slideUp();  $('div').removeClass('open');" aria-expanded="false">My Account<span class="fa fa-angle-down my-accout-arrow"></span></a>
+                                  
+                                </li>
+                            </ul>
+                            </div>
+                </div>
+              
+            </div>
+        </div>
+    </div>
+    </div>
+    <div class="mobileMenuContainer">
+        
+
+<div class="container mobile-menu-top-section">
+    <div class="row">
+      
+        <nav id="mobile-menu-dashboard" class="navbar" style="display: none; font-size: 24px;">
+      
+
+            <ul id="subMenuClose">
+                <li style="color:darkslategray;font-weight: 600;"><span onclick="closeSub()"> <i class="fa fa-angle-left" style="font-size:17px " aria-hidden="true"></i>&nbsp; Back </span> <span id="SelectedMenu" style="padding-left:70px;text-transform:uppercase;"></span></li>
+                  </ul>
+                  <ul  id="mainMenu">
+                 <li><a href="/">Home</a></li>
+                <li onclick="OurServices('Our Services')"><a>Our Services <i class="fa fa-angle-right rightIcon"  aria-hidden="true"></i></a></li>
+                 <li  onclick="PricesClick('Prices')"><a>Prices <i class="fa fa-angle-right rightIcon" aria-hidden="true"></i></a></li>
+                  <li   onclick="shippingClick('Shipping')"><a>Shipping <i class="fa fa-angle-right rightIcon" aria-hidden="true"></i></a></li>
+                      <li  onclick="ourCarriersClick('Our Carriers')"><a> Our Carriers <i class="fa fa-angle-right rightIcon" aria-hidden="true"></i></a></li>
+                <li  onclick="howItWorksClick('How It Works')"><a>How It Works <i class="fa fa-angle-right rightIcon" aria-hidden="true"></i></a></li>
+                      </ul>
+            <ul id="ourService">
+                    <a href="/en-gb/uk-courier-services"><li >UK Parcel Delivery</li></a>
+                                        <a href="/en-gb/international-courier-services"> <li>International Delivery</li></a>
+                                        <a href="/en-gb/international-courier-services/import-services"><li >Import Services</li></a>
+                                        <a href="/en-gb/courier-services/large-and-heavy-parcels"><li >Large &amp; Heavy Parcels</li></a>
+             </ul>
+            <ul id="Prices">
+                 <a href="/en-gb/courier-services/prices-and-surcharges">  <li>Prices &amp; Surcharges </li></a>
+                                        <a href="/en-gb/support/moneybackguarantee">  <li>Money Back Guarantee</li></a>
+                                      <a href="/en-gb/courier-services/parcel-delivery-insurance-calculator">  <li>Loss & Damage Cover</li></a>
+            </ul>
+            <ul id="Shipping">
+                  <a href="/en-gb/support/gift-wrapping-and-packaging-guidelines">  <li>Packaging guidelines</li></a>
+                                            <a href="/en-gb/support/customs-importduties-taxes">  <li>Customs</li></a>
+                                            <a href="/en-gb/support/size-and-weight-restrictions">  <li>Size & Weight</li></a>
+                                            <a href="/en-gb/support/how-to-calculate-length-plus-girth">  <li>Length & Girth calculator</li></a>
+                                            <a href="/en-gb/support/volumetric-weight-calculator">  <li>Volumetric weight calculator</li></a>
+            </ul>
+            <ul id="howItWorks">
+                   <li><a href="/en-gb/courier-services">  <li>Our Courier Services</li></a>
+                                                <a href="/en-gb/about-us">  <li>About Us</li></a>
+                                                <a href="/en-gb/courier-services/collection-and-delivery">  <li>Collection &amp; Delivery</li></a>
+            </ul>
+            <ul id="OurCarriers">
+                                        <a href="/en-gb/courier-services/carriers/dhl">  <li>DHL</li></a>
+                                        <a href="/en-gb/courier-services/carriers/ups">  <li>UPS</li></a>
+                                        <a href="/en-gb/courier-services/carriers/dpd">  <li>DPD</li></a>
+                                        <a href="/en-gb/courier-services/carriers/parcelforce">  <li>ParcelForce</li></a>                        
+                                        <a href="/en-gb/courier-services/carriers/hermes">  <li>Hermes</li></a>                      
+            </ul>
+
+
+ 
+        </nav>
+    
+         <nav id="mobile-menu-MyAccount" class="navbar" style="display: none">
+             <div class="row item" style="width:100%">
+                  <div class="close-btn-menu"> <img width="47px" src="../../../../content/images/icon_close.svg" onclick="$('#mobile-menu-MyAccount').hide()"></img></div>
+             </div>
+            
+            <ul class="menu vertical medium-horizontal" data-responsive-menu="drilldown medium-dropdown">
+                
+
+
+                
+               
+                    <a href="/login" class="menuitem sign-out-btn"><li> Sign in</li></a>
+               
+                  <a href="/register" title="Register account"><li> Register account</li></a>
+                
+               
+                <a href="/dashboard" class="menuitem"> <li>Dashboard</li></a>
+              
+                <a href="/ebilling" class="menuitem"> <li>eBilling</li></a>
+                <a href="/account-settings" class="menuitem"> <li>Account Settings</li></a>
+                
+            </ul>
+        </nav>
+        
+         </div>
+</div>
+
+
+    </div>
+    <div id="PhHeaderRow">
+        <div class="container" >
+            <div class="row">
+                 
+                <div class="col-lg-4 col-md-4 col-sm-6  logo-div" id="PHLogoContainer">
+                    <div class="PHlogo">
+                        <a href="/">
+                            <svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 755.94 162.95"><defs><style>.cls-1{fill:#2882be;}.cls-2{fill:#d5d9de;}.cls-3{fill:#fe4b4b;}.cls-4{fill:#fff;}</style></defs><title>ph_logo</title><path class="cls-1" d="M618,22A80.77,80.77,0,0,1,662.9.6c14.7-1.6,29.8.2,43.4,6.2A82.64,82.64,0,0,1,747.2,45a81,81,0,0,1-14.1,93.1,81.33,81.33,0,0,1-44,23.6c-18.5,3.3-38.3.3-54.6-9.1A73.64,73.64,0,0,1,602.1,115c-2.6-6.7-4.6-13.8-3.8-21.1,1.7,8.8,5.8,16.9,10.1,24.7A71.08,71.08,0,0,0,637,147a75.57,75.57,0,0,0,62.2,4.3c26.3-9.6,46-35.2,47.6-63.3A72.55,72.55,0,0,0,692,12.6c-16.3-3.9-34.1-2.3-49.2,5.2-19.9,9.7-34.1,29.6-37.9,51.3-.6,2.4-.6,5.3-2.8,7-2.9,2.5-8.1.7-8.9-3.1-.4-2.7.4-5.4.9-8A83,83,0,0,1,618,22" transform="translate(-0.06 -0.05)"/><path class="cls-2" d="M667.4,18.5c12.7-1.2,25.9.7,37.3,6.8A65.09,65.09,0,0,1,739.2,73c1.8,12.9.2,26.6-5.7,38.3a65.48,65.48,0,0,1-42.3,34.6c-14.5,3.5-30.3,2.4-43.7-4.2a64.74,64.74,0,0,1-31.6-32.4,66,66,0,0,1-2.3-46.9c7.5-23.3,29.3-41.3,53.8-43.9" transform="translate(-0.06 -0.05)"/><path class="cls-1" d="M300.3,22.4c3.1-1.4,7.2.8,6.6,4.5.1,27.7,0,55.4,0,83.1,0,2,0,4.7-2.2,5.6s-5.5.6-6.5-1.9c-.6-2.5-.3-5.2-.3-7.8V26.8c0-1.6.5-3.8,2.4-4.4" transform="translate(-0.06 -0.05)"/><path class="cls-3" d="M323.1,26.9c-.1-3.8,5.2-4.8,7.6-2.6,1.1,1.3,1.1,3,1.2,4.6.1,9.6-.1,19.2.1,28.8,3.1-4,7-7.6,12-8.7,13.3-3.7,28.9,6.9,29.2,21,.1,14.3.1,28.7,0,43,.4,4.2-5.6,5.3-7.9,2.7-1-1.4-.8-3.1-.9-4.7V75c0-5.3-1.8-10.9-6-14.4-5.5-4.7-14.2-4.7-19.9-.3A17.15,17.15,0,0,0,332,73.9c-.2,13,.1,26.1-.1,39.1.3,4.5-6.8,5.4-8.5,1.7a19.89,19.89,0,0,1-.3-4.9c0-27.5-.2-55.2,0-82.9" transform="translate(-0.06 -0.05)"/><path class="cls-4" d="M658.1,30c6.8-1.9,13.8-3.8,20.9-2.9,4.7,1.7,4.4,7.7,6.8,11.3,1.4,2.5,4.8,1.3,6.5-.1a24.21,24.21,0,0,0,2.3-7.5A55.73,55.73,0,0,1,730.2,74a99.48,99.48,0,0,1,0,18.1c-2.7,18-15.1,33.9-31.4,41.7-4,1.7-7.6,4.6-12,4.9a92.25,92.25,0,0,1-13.9.4c1.4-3.1,2.3-6.6,4.2-9.4a45.12,45.12,0,0,0,14.2-.3c4.8-3,7.1-8.5,10-13.2,1-1.7,2.3-3.7,1.3-5.7-2.4-3.4-6.1-5.4-9.8-7.1-5-2.4-9.1-6.3-14-8.7-4.9-1.1-10.1,2.2-14.7-.5a84.86,84.86,0,0,1-14.9-11.1c-3.3-2.9-3.1-7.8-3.1-11.9,3.2-.2,6.7-.8,9.8.3,2.7,1.7,4.3,4.9,7.5,5.9,2.1-4.2-4.6-8.9,0-12.1,4.8-3.9,9.9-7.5,14.1-12,1.6-1.9-.5-4.1-1.8-5.4-2.3-2.3-5.3-5.4-8.9-4.1-2.2,1.8-4.1,3.9-6.3,5.8a34.38,34.38,0,0,0-1.9-9,45.54,45.54,0,0,1,6.2-5.3c-1.3-1.1-2.4-3.1-4.3-2.8-2.6.3-5,1.3-7.5,1.9-.6-3.3,2.9-3.6,5.1-4.4" transform="translate(-0.06 -0.05)"/><path class="cls-2" d="M701,37c4.6,3.3,8.6,7.4,12.7,11.4s6.7,9.4,9.6,14.3c1.9,3.1,1.3,6.9,1.3,10.3-.3,6.1.4,12.2-.4,18.3-.5,1.5-.3,3.7-1.9,4.5-2.7-2.9-5-6.3-5.8-10.1-1.2-6.4-.6-12.9-1-19.3-.8-6.6-5.9-11.2-9-16.8A82.87,82.87,0,0,1,701,37" transform="translate(-0.06 -0.05)"/><path class="cls-1" d="M1.8,47.8c2.4-1.3,6.5-.7,6.9,2.4.4,3.3.2,6.6.5,9.8A22.69,22.69,0,0,1,25.1,47.5a24.37,24.37,0,0,1,22.3,8c6.8,7.7,9.4,18.3,9.3,28.4-.3,9.6-3.3,19.6-10.2,26.4-7.9,8-21.6,9.5-30.9,3.1-2.7-1.8-4.6-4.5-6.5-7C9,117.3,9.2,128.2,9,139c.1,3.4-3.9,5.6-6.8,4.1-2-.9-2.1-3.3-2.1-5.2v-85c-.1-1.7-.2-4.1,1.7-5.1" transform="translate(-0.06 -0.05)"/><path class="cls-1" d="M140,57.9a25,25,0,0,1,23.9-10.5c2.1.4,4.5,1.4,5.3,3.6,1.3,2.8-1.1,6.5-4.2,6.3-4.2,0-8.6-1.6-12.7,0-6.8,2.5-12.5,9.1-12.5,16.6-.1,12.7.1,25.4-.1,38,.3,4-5.1,5.1-7.7,2.9-1-1.1-1-2.6-1.1-4V58.7a41.79,41.79,0,0,1,.3-7.9c.9-3.7,7.6-3.6,8.3.2a42.3,42.3,0,0,1,.5,6.9" transform="translate(-0.06 -0.05)"/><path class="cls-1" d="M234.9,59A26.5,26.5,0,0,1,253,47.4c8.1-1.1,17,.8,23.1,6.5,7.6,7.2,9.9,18.6,8.3,28.6-.4,3-3.5,4.6-6.3,4.3-13.5.1-27.1,0-40.6,0,.7,12.8,13.7,24.1,26.6,21.2,5.8-.4,9.5-5.1,14.3-7.6,3.4-1.7,7.4,1.7,5.8,5.3-3.6,5.5-9.8,9.1-16.1,10.6-8.2,1.8-17.2,1.4-24.5-3-7.8-4.5-12.7-12.8-14.6-21.5-2.4-11-.6-23.3,5.9-32.8" transform="translate(-0.06 -0.05)"/><path class="cls-1" d="M74.3,52.2c3.2-2.1,7.1-2.9,10.9-3.7,7.1-1.1,14.6-1.6,21.5.9a20.07,20.07,0,0,1,12.2,11.8c1.9,4.7,1.4,9.8,1.4,14.7-.1,12.4.1,24.7-.1,37.1,0,3.5-4.7,5.2-7.2,3.1-2.2-1.6-1.5-4.7-1.9-7.1-10.2,9.7-28.6,11.2-38.8.7-5-5.5-5.9-13.9-3.1-20.7,2.6-6.2,8.5-10.4,14.8-12.1,9.1-2.6,19.4-1.4,27.1,4.3-.4-6.4,1.7-13.9-3-19.2-5-5.4-13.2-6.1-20.1-5-4.4.5-8.5,2.9-12.9,2.2-3.3-.7-3.3-5.3-.8-7" transform="translate(-0.06 -0.05)"/><path class="cls-3" d="M397.8,52.8c9.1-6.5,22.3-6.2,31.5-.1,9.7,6.7,12.8,19.7,11,30.8-.4,3-3.5,4.6-6.3,4.4-13.5.1-27.1,0-40.6.1.7,12.8,13.6,24,26.5,21.2,5.8-.4,9.6-5.2,14.5-7.6,3.4-1.7,7.5,1.8,5.8,5.4-3.7,5.7-10.1,9.3-16.7,10.7-8,1.6-16.7,1.1-23.9-3.1-7.8-4.5-12.8-12.8-14.6-21.5-3.1-14.3.7-31.3,12.8-40.3" transform="translate(-0.06 -0.05)"/><path class="cls-3" d="M477.9,48.8c4.2-.8,9.2-1.4,13,1.3,3,2.2,1.9,7.5-1.8,8.2-4.3.4-8.7-1.5-12.9-.1-7.5,2.3-13.6,9.7-13.2,17.8v35c-.1,1.6.1,3.5-1,4.8-2.4,2.4-8.2,1.4-7.9-2.7,0-20-.1-40.1.1-60.1-.1-4.4,7.4-4.9,8.4-.9a40.06,40.06,0,0,1,.5,6.9c3.5-5,8.7-9,14.8-10.2" transform="translate(-0.06 -0.05)"/><path class="cls-3" d="M517.5,48.7c7.5-1.5,15.8.1,21.8,5,7,5.6,10.9,14.4,12.3,23.2,1.6,10.9-.2,22.8-7.2,31.6-8.6,11.2-26.4,13.2-37.5,4.7-7-5.3-10.9-13.8-12.3-22.3-1.6-10.4,0-21.6,5.8-30.5a26.12,26.12,0,0,1,17.1-11.7" transform="translate(-0.06 -0.05)"/><path class="cls-4" d="M619.5,82.9c-.7-13,4.4-25.9,12.8-35.7,2.4,6.5-.4,13.5,1.4,20,1.1,3.4,3.6,6.1,4.5,9.6.9,2.8,1,6.3,3.9,8,6,3.9,11.1,9,17.1,13a24.42,24.42,0,0,1,4,3.2c1.7,5.2-3.6,10.1-1.4,15.3,1.1,3,3.8,4.9,5.6,7.4a21,21,0,0,1-3.7,15.2,118.17,118.17,0,0,0-11.5-5.1c-19.5-8.6-33.6-29.3-32.7-50.9" transform="translate(-0.06 -0.05)"/><path class="cls-1" d="M197.5,49.6c7.7-1.4,16.2-1.2,23.2,2.7a4.33,4.33,0,0,1,.9,7.2c-1.9,1.7-4.4.2-6.5-.3-7.2-2.5-15.7-2.8-22.2,1.7-10.3,6.9-13.1,21.7-8.6,32.8,3.3,8.4,11.5,15,20.8,15,4.9.2,9.5-1.7,13.7-4,2.8-1.9,6.3,2.1,4.8,4.9s-4.6,4.3-7.4,5.5c-11.8,5-26.4,1.3-34.6-8.5-11.3-13.2-11.5-34.9.3-47.9a30.19,30.19,0,0,1,15.6-9.1" transform="translate(-0.06 -0.05)"/><path class="cls-4" d="M25.5,56.6a15.31,15.31,0,0,1,14.8,4.1c5.5,5.9,7.2,14.4,7.3,22.2-.1,7.8-1.6,16.4-7.4,22.1-6.7,6.4-18.5,5-24.1-2.1-6.5-8.2-7.5-19.6-5.3-29.5,1.7-7.4,6.7-15.1,14.7-16.8" transform="translate(-0.06 -0.05)"/><path class="cls-4" d="M246.6,59.6c6.4-4.8,16.1-4.8,22.1.7,5.1,4.4,6.9,11.3,7.3,17.8-12.8.1-25.6,0-38.4,0,.2-7,3.1-14.3,9-18.5" transform="translate(-0.06 -0.05)"/><path class="cls-4" d="M403.2,60.2c6.6-4.5,16.3-4.2,22,1.6,4.7,4.4,6.4,11,6.7,17.3-12.8.2-25.6,0-38.3.1.2-7.4,3.3-14.9,9.6-19" transform="translate(-0.06 -0.05)"/><path class="cls-4" d="M518.4,57.5a16.35,16.35,0,0,1,15.4,3.7c5.7,5.3,8.2,13.2,8.9,20.8.5,7.6-1,15.8-5.9,21.8a17.61,17.61,0,0,1-21.7,4.1c-5.1-2.9-8.2-8.4-9.9-13.9-2.5-8.3-2.4-17.7,1.2-25.7,2.1-5.1,6.5-9.5,12-10.8" transform="translate(-0.06 -0.05)"/><path class="cls-4" d="M87.5,84.6a25.6,25.6,0,0,1,18.2,2.6c3.4,1.9,6,5.8,5.2,9.8-.8,4.7-4.9,8-9.1,9.6-6.3,2.4-13.8,2.7-19.7-.7-4.9-2.8-6.7-9.4-4.4-14.4,1.8-3.8,5.8-6,9.8-6.9" transform="translate(-0.06 -0.05)"/></svg>    
+                        </a>
+                    </div>
+                </div>
+                     <div class="dahboard-menu col-lg-8 col-md-8 col-sm-12" >
+                          
+                    <a class="moblieTrack"  href="/en-gb/parcel-tracking" title=""> <img style="margin-left: 6px;" width="25px;" src="/content/images/icon_parcel_small.svg"></img>
+                        <span style="font-family: 'Roboto', sans-serif; display:block;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 11px;
+    line-height:1;
+    color: #626D80;
+        margin-top: 3px;
+        text-transform: uppercase;">Track</span>
+                    </a>
+                    
+
+
+
+
+                 <div class="menu-toggle">
+                    <div class="hamburger"></div>
+                      <span style="    font-family: 'Roboto', sans-serif;display:block;position:absolute;top:15px;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 11px;
+    line-height:1;
+    color: #626D80;
+        text-transform: uppercase;">Menu</span>
+                     </div>
+
+                <div id="dvTPHolder" class="col-lg-12 col-md-12 col-sm-6 hidden-xs text-right">
+                    
+                        <div class="hidden-xs">
+                            <ul id="menu">
+                                <li><a href="/">Home</a></li>
+                                <li class="inner-menu-nav">Services
+                                    <div class="list cols-2">
+                                    <p class="head">Courier Services</p>
+                                    <div class="dvRow">
+                                        <div>
+                                        <p class="groupHead">Our Services</p>
+                                        <div><a href="/en-gb/uk-courier-services">UK Parcel Delivery</a></div>
+                                        <div><a href="/en-gb/international-courier-services">International Delivery</a></div>
+                                        <div><a href="/en-gb/international-courier-services/import-services">Import Services</a></div>
+                                        <div><a href="/en-gb/courier-services/large-and-heavy-parcels">Large &amp; Heavy Parcels</a></div>
+
+                                        </div>
+                                        <div>
+                                        <p class="groupHead">Our Carriers</p>
+                                        <div><a href="/en-gb/courier-services/carriers/dhl">DHL</a></div>
+                                        <div><a href="/en-gb/courier-services/carriers/ups">UPS</a></div>
+                                        <div><a href="/en-gb/courier-services/carriers/dpd">DPD</a></div>
+                                        <div><a href="/en-gb/courier-services/carriers/parcelforce">ParcelForce</a></div>
+                                        <div><a href="/en-gb/courier-services/carriers/hermes">Hermes</a></div>
+                                        </div>
+                                    </div>
+                                    <div class="dvRow">
+                                        <div>
+                                        <p class="groupHead">Prices</p>
+                                        <div><a href="/en-gb/courier-services/prices-and-surcharges">Prices &amp; Surcharges</a></div>
+                                        <div><a href="/en-gb/support/moneybackguarantee">Money Back Guarantee</a></div>
+                                        <div><a href="/en-gb/courier-services/parcel-delivery-insurance-calculator">Loss & Damage Cover</a></div>
+                                        </div>
+                                        <div>
+                                        <p class="groupHead">My account</p>
+                                        <div><a href="/en-gb/support/membership-information">Membership Information</a></div>
+                                        <div><a href="/en-gb/support/refer-a-friend">Refer A Friend</a></div>
+                                        <div><a href="/en-gb/support/business-courier-service">Apply for a Business Account</a></div>
+                                        <div><a href="/en-gb/support/toppingupyouraccount">Topping Up Your Account</a></div>
+                                        </div>
+                                    </div>
+                                    <div class="dvRow">
+                                        <div>
+                                            <p class="groupHead">Shipping</p>
+                                            <div><a href="/en-gb/support/gift-wrapping-and-packaging-guidelines">Packaging guidelines</a></div>
+                                            <div><a href="/en-gb/support/customs-importduties-taxes">Customs</a></div>
+                                            <div><a href="/en-gb/support/size-and-weight-restrictions">Size & Weight</a></div>
+                                            <div><a href="/en-gb/support/how-to-calculate-length-plus-girth">Length & Girth calculator</a></div>
+                                            <div><a href="/en-gb/support/volumetric-weight-calculator">Volumetric weight calculator</a></div>
+                                        </div>
+                                        <div>
+                                            <div>
+                                                <p class="groupHead">How It Works</p>
+                                                <div><a href="/en-gb/courier-services">Our Courier Services</a></div>
+                                                <div><a href="/en-gb/about-us">About Us</a></div>
+                                                <div><a href="/en-gb/courier-services/collection-and-delivery">Collection &amp; Delivery</a></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    </div>
+                                </li>
+                
+                                <li><a href="https://support.parcelhero.com/hc">Support</a></li>
+                            </ul>
+                        </div>
+
+                </div>
+            </div>
+        </div>
+
+             
+            </div>
+
+    </div>
+
+            </div>
+            <script type="text/javascript">
+                $(document).ready(function () {
+                    $('.inner-menu-nav').hover(function () {
+                        $(this).find('.list').stop(true, true).delay(100).fadeIn(300);
+                    }, function () {
+                        $(this).find('.list').stop(true, true).delay(100).fadeOut(300);
+                    });
+                    updateHeaderBalance();
+                    $('.list-group .logout-button').attr('onclick', 'LogoutAccept()');
+                    $('.dahboard-menu').addClass('col-lg-8 col-md-8 col-sm-6');
+                });
+            </script>
+    </header>
+    
+    <div class="form-error-with-sticker">
+
+    
+
+
+<section class="bg-gray-light pt-g">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-lg-12 order-confirmation-container">
+                <br /><br />
+                
+
+    <div class="block order-summary mob-pad-575 mb-g">
+        <div class="order-confirmation-header text-center">
+            <div class="block-title">
+                <h4 class="text-medium-subtitle order-confirmation-title"><img src="/Areas/WizardSection/Content/images/icons/check-rounded-ico.png" alt="" /> Your parcel is booked!</h4>
+            </div>
+            <div class="shipment-confirmation-header-data">
+                    <p class="confirmation-shipment-date">Your shipment will be collected on <span>Wednesday, 5 May, 2021</span></p>
+                <p class="confirmation-send-email">A confirmation email has been sent to <span>charles@astwood.com</span></p>
+            </div>
+<div class="confirmation-sign-up confirmation-header-sec-box">
+    <p class="header-sec-title">Sign up & save on your next shipment</p>
+    <div class="header-sec-info">
+        <div class="d-inline-block">
+            <div class="d-lg-flex">
+                <div class="header-sec-info-item">
+                    <img src="/Areas/WizardSection/Content/images/icons/icon_rounded_check_gray.png" alt="" />
+                    <span>View order history</span>
+                </div>
+                <div class="header-sec-info-item">
+                    <img src="/Areas/WizardSection/Content/images/icons/icon_rounded_check_gray.png" alt="" />
+                    <span>Checkout faster</span>
+                </div>
+                <div class="header-sec-info-item">
+                    <img src="/Areas/WizardSection/Content/images/icons/icon_rounded_check_gray.png" alt="" />
+                    <span>Save up to 8%</span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="header-sec-controls">
+        <div class="d-block d-lg-inline-block">
+            <div class="d-lg-flex password-set-section">
+                <span class="input-text-group">
+                    <input type="password" class="element-input" value="" id="txtSetpassword" style="border: 1px solid #ced4da;" />
+                    <a href="javascript:void(0);" class="signinpassowrd"><img src="/Areas/WizardSection/Content/images/icons/icon_eye.png" alt="" /></a>
+                </span>
+                <input type="button" class="btn mt-3 mt-lg-0" id="btnSetPassword" value="SIGN UP" />
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="confirmation-sign-in confirmation-header-sec-box sign-up-success d-none">
+    <p class="header-sec-title">Your account has been created</p>
+    <div class="header-sec-info">
+        <div class="d-inline-block">
+            <div class="d-flex">
+                <div class="header-sec-info-item">
+                    <span>Sign in to manage your bookings</span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="header-sec-controls">
+        <div class="d-inline-block">
+            <div class="d-flex">
+                <a href="/login" class="btn">SIGN IN</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script type="text/javascript">
+    $(document).ready(function () {
+        $(document).on('click', '.confirmation-sign-up .input-text-group a.signinpassowrd', function (e) {
+            e.stopImmediatePropagation();
+            if ($('#txtSetpassword').attr('type') == 'text') {
+                $('#txtSetpassword').attr('type', 'password');
+            }
+            else {
+                $('#txtSetpassword').attr('type', 'text');
+            }
+            e.preventDefault();
+        });
+
+        $(document).on('click', '.confirmation-sign-up #btnSetPassword', function (e) {
+            e.stopImmediatePropagation();
+            if ($('#txtSetpassword').val().length > 0) {
+                DarkenPageWithLoading();
+                var $thisContainer = $(this).parents('.confirmation-sign-up');
+                $.post("/wizard/setcustomerpassword", { password: $('#txtSetpassword').val(), email: $('#hdnPassEmail').val() }, function (data) {
+                    if (data != null && data.toLowerCase().indexOf('success') >= 0) {
+                        $thisContainer.remove();
+                        $('.confirmation-sign-in.sign-up-success').removeClass('d-none');
+                    }
+                    else {
+                        alert('error!');
+                    }
+                    LightenPage();
+                });
+            }
+            else {
+                $('#txtSetpassword').focus();
+                $('<p class="error-item" style="display:block;" id="txtSetpassword_Err">Please enter the password</p>').appendTo($(this).parents('.confirmation-sign-up .password-set-section').parent());
+            }
+            e.preventDefault();
+        });
+        $(document).on('keyup', '.confirmation-sign-up #txtSetpassword', function (e) {
+            e.stopImmediatePropagation();
+            if ($('#txtSetpassword').val().length > 0) {
+                $('#txtSetpassword_Err').remove();
+            }
+        });
+    });
+</script>                <input type="hidden" id="hdnPassEmail" value="63006800610072006c0065007300400061007300740077006f006f0064002e0063006f006d00" />
+        </div>
+
+        <div class="order-confirmation-section">
+
+
+    <div class="single-shipment">
+        <div class="shpment-label-important-notice d-block mb-5">
+            <div class="order-cnf-printing-info">
+                <h2> Order Summary</h2>
+                <p>Please remember to place the spare label inside your parcel. <a href="https://support.parcelhero.com/hc/en-gb/articles/360015029379" target="_blank">Learn more</a></p>
+                
+                
+                <div class="order-summary-header d-flex">
+                    <div>
+                        <span class="carrier-logo-cnt"><img class="icon-xl order-carrier-logo carrier-hermes" src="/content/images/select-service/hermes.svg" alt=""></span>
+                        <span class="text-strong">1 Shipment</span>
+                    </div>
+                </div>
+                <div class="printing-item mt-3 pt-2">
+                    <table class="table order-confirmation-single-shipment-table tbl-shipments-details no-more-table">
+                        <thead>
+                            <tr>
+                                <th>Parcels</th>
+                                <th>Recipient</th>
+                                <th>Destination</th>
+                                <th>Tracking #</th>
+                                <th class="label-print-row">Shipping docs</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="shipment-details-section">
+                                <td>
+                                    <span class="spnMobLabel">Parcels</span>
+                                    <span class="spntd">1</span>
+                                </td>
+                                    <td>
+                                        <span class="spnMobLabel">Recipient</span>
+                                        <span class="spntd">Test Receiver</span>
+                                    </td>
+                                <td>
+                                    <span class="spnMobLabel">Destination</span>
+                                    <span class="spntd captalize-text">great britain</span>
+                                </td>
+                                <td>
+                                    <span class="spnMobLabel">Tracking #</span>
+                                    <span class="spntd"><a href="/en-gb/courier-services/tracking/H00FFA0000000265" target="_blank">H00FFA0000000265</a></span>
+                                </td>
+                                        <td>
+                                            <span class="spnMobLabel">Label printing</span>
+                                            <span class="spntd"><a href="javacript:void(0);" data-carrier-id="Hermes" data-tracking-number="H00FFA0000000265" class="download-qr-code-confirmation">Download and print</a></span>
+                                        </td>
+                            </tr>
+                                <tr>
+                                    <td class="shipment-descript-section ship-info-block" colspan="6">
+                                        <h4>Shipment information</h4>
+                                        <ul>
+                                                                                                                                                                                    <li>If your collection fails, Hermes will automatically make 2 further attempts, if you don’t want to wait, you can drop off your parcel at a shop near you. <a href="/collection?TabID=1&awb=H00FFA0000000265&pcode=SW182EA" target="_blank">Find drop off locations</a></li>
+                                                                                                                                                                                                                        </ul>
+                                    </td>
+                                </tr>
+                        </tbody>
+                    </table>
+
+                </div>
+            </div>
+            <div class="order-cnf-important-info mt-5">
+                <h2><img src="/Areas/WizardSection/Content/images/icons/info-blue.png" alt="" /> Important information</h2>
+                <div class="d-block d-md-flex">
+                    <div class="important-item d-flex mt-4 w-100">
+                        <div class="imp-icon-section">
+                            <img src="/Areas/WizardSection/Content/images/icons/icon_package.png" alt="" />
+                        </div>
+                        <div class="imp-content-section">
+                            <h3>Packaging</h3>
+                                <p>If your items are not packaged safely, you may not be entitled to claim in the event of damage. Please secure one label to the shipping box and place the duplicate label inside the box. This will help to recover the parcel if it is lost. </p>
+                            <p><a href="https://www.parcelhero.com/en-gb/support/gift-wrapping-and-packaging-guidelines" target="_blank">Packing your items safely</a></p>
+                        </div>
+                    </div>
+                    <div class="important-item d-flex mt-4 w-100">
+                        <div class="imp-icon-section">
+                            <img src="/Areas/WizardSection/Content/images/icons/icon_box.jpg" alt="" />
+                        </div>
+                        <div class="imp-content-section">
+                            <h3>Images</h3>
+                            <p>If you're sending a bulky item, we recommend taking pictures of each side of the box (With shipping label in view), with a tape measure showing the dimensions. This can be used if the carrier audit differs from your declared dimensions. <a href="https://support.parcelhero.com/hc/en-gb/articles/360014783900" target="_blank">Learn more</a></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript">
+        $(document).ready(function(){
+            if($('.ship-info-block').length > 0 && $('.ship-info-block ul li').length==0) {
+                $('.ship-info-block').addClass('d-none');
+            }
+        });
+    </script>
+        </div>
+    </div>
+    <span id="parcel-shiping-total" class="d-none">9.24</span>
+    <input type="hidden" id="hdnQuoteId" value="" />
+    <input type="hidden" id="hdnSessionId" value="crepiquoliabeciiqdbl4v40" />
+    <input type="hidden" id="hdnServiceName" value="" />
+    <input type="hidden" id="hdnShipmentCountry" value="207^GBtoGB^207^GBtoGB" />
+
+            <script type="text/javascript">
+                var isresig = 'True'
+                var isTransType='False'
+                var resig = '';
+                var Ref_Type = '';
+                if (isresig == true)
+                    resig = "Individual";
+                else
+                    resig = "Business";
+
+                if(isTransType==true)
+                    Ref_Type="Purchase_Referrals";
+                else
+                    Ref_Type="Purchase";
+
+                var Voucher_Code = '';
+                var TransTotal=7.7;
+
+                if (Voucher_Code !="")
+                {
+                    if (Voucher_Code.indexOf('~#?1')>0)
+                    {
+                        Voucher_Code=Voucher_Code.replace('~#?1',"");
+                    }
+                    else if (Voucher_Code.indexOf('~#?')>0)
+                    {
+                        Voucher_Code=Voucher_Code.replace('~#?',"");
+                    }
+                }
+
+                var visitorID = "";
+                function readCookie(name) {
+                    name += '=';
+                    for (var ca = document.cookie.split(/;\s*/), i = ca.length - 1; i >= 0; i--)
+                        if (!ca[i].indexOf(name))
+                            return ca[i].replace(name, '');
+                }
+                var gaUserCookie = readCookie("_ga");
+                if (gaUserCookie != undefined) {
+                    var cookieValues = gaUserCookie.split('.');
+                    if (cookieValues.length > 2) {
+                        visitorID = cookieValues[2];
+                    }
+                }
+
+                dataLayer.push({
+                    'event': 'checkoutCompletedPurchase',  //trackTrans
+                    'transactionId': '12423',
+                    'transactionTotal': TransTotal,
+                    'transactionType': Ref_Type
+
+                });
+
+                var _products = [];
+
+                                    _products.push({ 'name':'None','id': 2463960 ,'price': 7.7 ,'category':'GB-GB','quantity': 1,'brand':'Hermes','coupon':''});
+
+
+                dataLayer.push({
+                    'ecommerce': {
+                        'purchase': {
+                            'actionField': {'id': 12423,'revenue': TransTotal,'coupon': Voucher_Code},
+                            'products': _products
+
+
+                        }
+                    }
+                });
+
+                const pvrev = {
+                    "order_id": 12423,
+                    "revenue": 7.7,
+                    "adjustment": 4.84,
+                    "tax": 1.54,
+                    "currency": "GBP",
+                    "coupon": "",
+                    "user_status": "not_logged_in",
+                    "products": [{ 'name':'GB > GB','brand': 'Hermes' ,'category':'GB-GB','adjustment': 4.84,'revenue':0,'quantity':1}]
+                };
+
+            </script>
+        <noscript>
+            <img src="https://www.google-analytics.com/collect?v=1&t=transaction&tid=12423&cid=9dde962e-05d1-4f5f-8547-79ab8f53257c&dp=%2Forder-confirmation&ti=2588626&tr=7.7&tt=0&ts=0&pa=purchase&pr1nm=None" width=1 height=1>
+        </noscript>
+
+<style>
+    #map, .confirmation-map {
+        height: 250px;
+    }
+</style>
+
+<script type="text/javascript">
+    $(document).ready(function () {
+    
+        $(document).on('click', '.order-summary .print-shipping-docs', function (e) {
+            e.stopImmediatePropagation();
+            DarkenPageWithLoading();
+            var shipmentId = $(this).attr('data-ship-id');
+            var carrierId = $(this).attr('data-ship-carrier');
+            try {
+                LogMessageDataWithNameSpace(enumNameSpaceForLogs.ParcelHero_Confirmation, "User clicked on Print Label with Shipment Id as " + shipmentId + " and carrier id as " + carrierId);
+            } catch (e) {
+
+            }
+            $.get("/wizard/getincriptedshipmentId/" + (new Date().getTime()) + "?shipmentId=" + shipmentId, function (data) {
+                if (data != null && data.length > 0) {
+                    openAjaxModel('/Order/PrintHTMLLabels/' + (data + 'lAl' + carrierId + 'lpdf'), '');
+                }
+            });
+            e.preventDefault();
+        });
+
+        $(document).on('click', '.order-summary .modify-current-shipment', function (e) {
+            e.stopImmediatePropagation();
+            var awb = $(this).attr('data-ship-awb');
+            if (awb != null && awb.length > 0) {
+                DarkenPageWithLoading();
+                location.href = "/collection?TabID=1&awb=" + awb;
+            }
+            e.preventDefault();
+        });
+
+        $(document).on('click', '.order-summary .print-all-ship-labels', function (e) {
+            e.stopImmediatePropagation();
+        
+            var pdfcode = $(this).attr('data-merge-number');
+            mergePdf(pdfcode);
+            e.preventDefault();
+        });
+    
+        $(document).on('click', '.order-summary .download-qr-code-confirmation', function (e) {
+            e.stopImmediatePropagation();
+            var carrierId = $(this).attr('data-carrier-id');
+            var trackingNumber = $(this).attr('data-tracking-number');
+            $.get("/wizard/getencrshipid/" + (new Date().getTime()) + "?trackingnumber=" + trackingNumber, function (data) {
+                if (data != null && data.length > 0) {
+                    fn_PrintInvoice(data + 'lAl' + carrierId + 'lpdf', trackingNumber);
+                }
+            });
+            e.preventDefault();
+        });
+    });
+
+    function mergePdf(pdfcode) {
+        if (pdfcode!="") {
+            window.location = "/Order/DownloadInvoicePDF?filePath=" + "" + "&FileName=" + (pdfcode) + "&labelFrom=2";
+        }
+        else {
+            warningPopup("We're sorry but we're unable to produce shipping document of your shipment.Please contact our support team.");
+        }
+    }
+
+</script>
+            </div>
+        </div>
+    </div>
+</section>
+
+    </div>
+    
+    
+
+    <!-- Google Tag Manager -->
+    <noscript>
+        <iframe src="//www.googletagmanager.com/ns.html?id=GTM-PPHCLK"
+                height="0" width="0" style="display:none;visibility:hidden"></iframe>
+    </noscript>
+    <script>
+    (function (w, d, s, l, i) {
+        w[l] = w[l] || []; w[l].push(
+{ 'gtm.start': new Date().getTime(), event: 'gtm.js' }
+); var f = d.getElementsByTagName(s)[0],
+j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+'//www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+    })(window, document, 'script', 'dataLayer', 'GTM-PPHCLK');</script>
+    <!-- End Google Tag Manager -->
+    
+
+</body>
+</html>
